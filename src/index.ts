@@ -1,15 +1,15 @@
 export default function (i: number): number | string {
 
-    let isThreeDivide: number = i % 3;
-    let isFiveDivide: number = i % 5;
+    let isThreeDivide: boolean = i % 3 == 0;
+    let isFiveDivide: boolean = i % 5 == 0;
 
-    if (!isThreeDivide && !isFiveDivide) {
+    if (isThreeDivide && isFiveDivide) {
         return "fizzbuzz";
     }
-    if (!isThreeDivide) {
+    if (isThreeDivide) {
         return "fizz";
     }
-    if (!isFiveDivide) {
+    if (isFiveDivide) {
         return "buzz";
     }
 
